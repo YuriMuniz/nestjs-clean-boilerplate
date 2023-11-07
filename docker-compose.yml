@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  postgres:
+    container_name: container-name
+    image: postgres
+    ports:
+      - 5434:5432
+    environment:
+      POSTGRES_USER:
+      POSTGRES_PASSWORD:
+      POSTGRES_DB:
+      PGDATA: /data/postgres
+    volumes:
+      - ./data/pg:/data/postgres
